@@ -52,6 +52,7 @@ mat = np.zeros((IMG_SIZE, IMG_SIZE), dtype=np.uint8)
 
 # Salvando as imagens
 print("Salvando as imagens...")
+
 for i in tqdm(range(len(df))):
     txt = df["pixels"][i]
     words = txt.split()
@@ -66,4 +67,5 @@ for i in tqdm(range(len(df))):
         img.save(DATASET_DIR / "train" / inner_folder_names[df["emotion"][i]] / f"{i}.png")
     else:
         img.save(DATASET_DIR / "validation" / inner_folder_names[df["emotion"][i]] / f"{i}.png")
+
 print("Imagens salvas com sucesso!")
