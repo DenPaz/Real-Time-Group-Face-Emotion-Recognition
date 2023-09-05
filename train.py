@@ -3,7 +3,7 @@ from pathlib import Path
 from keras.callbacks import ModelCheckpoint, ReduceLROnPlateau, TensorBoard
 
 from src.data_augmentation import get_data_generators
-from src.emotion_recognition_model import get_model
+from src.emotion_recognition_models import get_model
 
 BASE_DIR = Path(__file__).resolve().parent
 DATASET_NAME = "fer2013"
